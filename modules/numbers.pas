@@ -1,0 +1,85 @@
+unit Numbers;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils;
+
+type
+
+  Range = record
+    rangeFrom: integer;
+    rangeTo: integer;
+  end;
+  TArrayRanges = array of Range;
+
+var
+  hasError: boolean;
+  errorMessage: string;
+
+procedure setRange(_from: string; _to: string; var range: Range);
+function isPerfect(Value: integer): boolean;
+function inRange(Value: integer; ranges: TArrayRanges): boolean;
+
+implementation
+
+{Валидация и установка значения для отрезков}
+procedure setRange(_from: string; _to: string; var range: Range);
+begin
+  if (Length(_from) = 0) or (Length(_to) = 0) then
+  begin
+    hasError := True;
+    errorMessage := 'Необходимо задать отрезки [c,d] и [f,g]';
+    Exit;
+  end;
+
+  range.rangeFrom := StrToInt(_from);
+  range.rangeTo := StrToInt(_to);
+end;
+
+{Функция определяет является ли число совершенным}
+function isPerfect(Value: integer): boolean;
+var
+  i, s: integer;
+begin
+  Result := False;
+
+  if (Value <= 0) then
+  begin
+    exit;
+  end;
+
+  s := 0;
+  for i := 1 to Value div 2 do
+  begin
+    if Value mod i = 0 then
+      s := s + i;
+  end;
+
+  if (s = Value) then
+    Result := True;
+end;
+
+{Проверяем, находится ли заданное значение в одном из массиве отрезков}
+function inRange(Value: integer; ranges: TArrayRanges): boolean;
+var
+  i: integer;
+begin
+
+  for i := Low(ranges) to High(ranges) do
+  begin
+    with ranges[i] do
+    begin
+      if (Value >= rangeFrom) and (Value <= rangeTo) then
+      begin
+        Result := True;
+        exit;
+      end;
+    end;
+  end;
+  Result := False;
+end;
+
+end.

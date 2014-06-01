@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="project"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="9">
+      <Unit0>
+        <Filename Value="project.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="project"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="modules\main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="modules\array_search.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="array_search"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="modules\array_sort.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="array_sort"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="modules\array_actions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="array_actions"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="modules\array_remove.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="array_remove"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="modules\perfect_number.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="perfect_number"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="modules\arrays.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Arrays"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="modules\numbers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Numbers"/>
+      </Unit8>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="project"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="modules"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
